@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Parqueadero</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div id="app" class="row">
+      <div id="parking-vehicle" class="col s4">
+         <form id="form-vehicle">
+            <div class="section">
+               <label>
+                  <input type="radio" name="typeVehicle" value="Automóvil" required>
+                  <a class="btn-flat waves-effect waves-light">
+                     <i class="material-icons">directions_car</i>
+                     $50 c/min
+                  </a>
+               </label>
+               <label>
+                  <input type="radio" name="typeVehicle" value="Motocicleta" required>
+                  <a class="btn-flat waves-effect waves-light">
+                     <i class="material-icons">motorcycle</i>
+                     $35 c/min
+                  </a>
+               </label>
+            </div>
+            <p class="info-minimum">Precio mínimo: 30 minutos</p>
+            <div class="input-field">
+               <i class="material-icons prefix">money</i>
+               <input type="text" id="vehicle-id" style="text-transform: uppercase;" required>
+               <label for="vehicle-id">Placa:</label>
+            </div>
+            <div class="input-field">
+               <i class="material-icons prefix">person</i>
+               <input type="text" id="owner" style="text-transform: capitalize;" required>
+               <label for="owner">Propietario:</label>
+            </div>
+            <div class="input-field">
+               <i class="material-icons prefix">fingerprint</i>
+               <input type="text" id="owner-id" required>
+               <label for="owner-id">Identificación:</label>
+            </div>
+            <div class="input-field">
+               <i class="material-icons prefix">phone</i>
+               <input type="text" id="phone" required>
+               <label for="phone">Teléfono:</label>
+            </div>
+               <table class="parking-spaces">
+                  <caption>Cupos</caption>
+                  <tr>
+                     <td>Automóviles</td>
+                     <td id="cars-parking-spaces">15</td>
+                  </tr>
+                  <tr>
+                     <td>Motocicletas</td>
+                     <td id="motorcycles-parking-spaces">20</td>
+                  </tr>
+               </table>
+              <div class="section">
+               <button type="submit" class="btn waves-effect">
+                  Registrar
+                  <i class="material-icons right">done</i>
+               </button>
+               <a class="waves-effect waves-light btn-flat modal-trigger" href="#incomes">
+                  Recaudado
+                  <i class="material-icons right">assignment</i>
+               </a>
+            </div>
+         </form>
+         <div id="incomes" class="modal">
+            <div class="modal-content">
+               <table>
+                  <tr>
+                     <th>Automóviles</th>
+                     <td id="incomes-cars">$0</td>
+                  </tr>
+                  <tr>
+                     <th>Motocicletas</th>
+                     <td id="incomes-motorcycles">$0</td>
+                  </tr>
+                  <tr>
+                     <th>Total</th>
+                     <td id="incomes-total">$0</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="parked-vehicles" class="col s8">
+         <table>
+            <thead>
+                  <th>Vehículo</th>
+                  <th>Placa</th>
+                  <th style="text-transform: capitalize;">Propietario</th>
+                  <th>Identificación</th>
+                  <th>Teléfono</th>
+                  <th>Tiempo</th>
+                  <th>Precio</th>
+                  <th></th>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
+      </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="js/app.js"></script>
+</body>
+</html>

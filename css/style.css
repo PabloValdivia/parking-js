@@ -1,0 +1,111 @@
+:root {
+   --primary: #3f51b5;
+   --light: #757de8;
+}
+
+html,
+body {
+   height: 100%;
+   overflow: hidden;
+}
+
+#app {
+   margin: 0;
+   height: 100%;
+}
+
+#parking-vehicle {
+   background: var(--primary);
+   text-align: center;
+   color: #fff;
+   height: 100%;
+   overflow-y: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 0 .75rem 0 rgba(0,0,0,0.12);
+}
+
+#form-vehicle {
+   max-height: 100%;
+}
+
+.btn,
+.btn-flat {
+   font-weight: bold;
+}
+
+.btn-flat {
+   background: var(--light);
+   color: #fff;
+}
+
+input[name="typeVehicle"] + a {
+   height: auto;
+   line-height: 16px;
+   padding: 8px 16px;
+}
+
+input[name="typeVehicle"] + a i {
+   display: block;
+   margin-bottom: 8px;
+}
+
+input[name="typeVehicle"]:checked + a {
+   background: #fff;
+   color: var(--primary);
+}
+
+.info-minimum {
+   font-weight: bold;
+   font-size: .8rem;
+   display: inline-block;
+}
+
+.input-field * {
+   color: #fff !important;
+}
+
+.input-field input {
+   border-bottom-color: #fff !important;
+}
+
+.input-field input:focus {
+   box-shadow: 0 1px 0 0 #fff !important;
+}
+
+table.parking-spaces caption {
+   font-weight: bold;
+   padding-bottom: 1rem;
+   border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+table.parking-spaces td {
+   text-align: center;
+   width: 50%;
+}
+
+button[type="submit"],
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+   background: #fff;
+   color: var(--primary);
+}
+
+.modal {
+   color: #000;
+}
+
+#parked-vehicles {
+   height: 100%; 
+   overflow-y: auto;
+}
+
+#parked-vehicles table th,
+#parked-vehicles table td {
+   text-align: center;
+}
+
+#parked-vehicles table td i.clear {
+   cursor: pointer;
+}
